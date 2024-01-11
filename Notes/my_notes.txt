@@ -1,5 +1,6 @@
 1) The irrelavant requirements dataset was taken from this -> https://ieeexplore.ieee.org/document/9650315
 
-2) Experiment 1:
+2) Experiment 1 (Classifying the relevant and irrelavant requirements):
 
-- Can I utilize the text classification models to classify the relevancy of the requirements? 
+- I will need an NLP model for the classification
+- Can I run a classifier model instead of the language processor layer to classify requirements? 
