@@ -1,6 +1,13 @@
 1) The irrelavant requirements dataset was taken from this -> https://ieeexplore.ieee.org/document/9650315
 
 2) Experiment 1 (Classifying the relevant and irrelavant requirements):
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 - I will need an NLP model for the classification
 - Can I run a classifier model instead of the language processor layer to classify requirements? 
+
+Observations
+-------------
+- There are too many relevant requirements to irrelavant ones (557 vs 64). So, I may need to use data resampling
+- Ensemble model is preferred as a classifier with proper hyperparameter tuning.
