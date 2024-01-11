@@ -9,5 +9,5 @@
 
 Observations
 -------------
-- There are too many relevant requirements to irrelavant ones (557 vs 64). So, I may need to use data resampling
+- There are too many relevant requirements to irrelavant ones (557 vs 64). So, I may need to use data resampling (check smote library)
 - Ensemble model is preferred as a classifier with proper hyperparameter tuning.
