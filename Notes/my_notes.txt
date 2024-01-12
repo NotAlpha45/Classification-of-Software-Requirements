@@ -11,3 +11,18 @@ Observations
 -------------
 - There are too many relevant requirements to irrelavant ones (557 vs 64). So, I may need to use data resampling (check smote library)
 - Ensemble model is preferred as a classifier with proper hyperparameter tuning.
+
+- RoBERTA Tokenizer vs. BERT tokenizer, which is better?
+
+Some Self Learning
+------------------
+------------------
+
+1) 
+robert_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
+tokenized_text_data_X = robert_tokenizer(text_data_X.tolist(), padding=True, return_tensors="pt", max_length=128)
+
+Here,
+return_tensors = in which data format we want the output. pt means pytorch tensors
+
+
