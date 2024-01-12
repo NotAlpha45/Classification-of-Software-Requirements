@@ -19,10 +19,17 @@ Some Self Learning
 ------------------
 
 1) 
+MY_DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 robert_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-tokenized_text_data_X = robert_tokenizer(text_data_X.tolist(), padding=True, return_tensors="pt", max_length=128)
+bert_model = BertForSequenceClassification.from_pretrained(
+    "bert-base-uncased", num_labels=2, device_map=MY_DEVICE
+)
+
 
 Here,
 return_tensors = in which data format we want the output. pt means pytorch tensors
+
+2) NVDIA SMI : C:\Windows\System32\DriverStore\FileRepository\nvamig.inf_amd64_a2789b14f82a67b9\nvidia-smi.exe
+
 
 
