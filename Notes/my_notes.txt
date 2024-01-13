@@ -20,9 +20,9 @@ Some Self Learning
 
 1) 
 MY_DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-robert_tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-bert_model = BertForSequenceClassification.from_pretrained(
-    "bert-base-uncased", num_labels=2, device_map=MY_DEVICE
+bert_tokenizer = DistilBertTokenizer.from_pretrained("roberta-base")
+bert_model = DistilBert.from_pretrained(
+    "distilbert-uncased", num_labels=2, device_map=MY_DEVICE
 )
 
 
