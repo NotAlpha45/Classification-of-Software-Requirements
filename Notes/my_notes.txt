@@ -39,3 +39,5 @@ X_train, X_test, y_train, y_test = train_test_split(
 Here, stratify means that it would preserve the distribution percentage of the data according to label_y.
 If label label_y has a class distribution for classes 0 and 1 of 40-60, this will be preserved in both train and test.
 
+4) My data for requirements relevancy is categorized either relevant or irrelevant. So there is no ordinal relationship.
+Therefore, one hot encoding would serve me best. 
