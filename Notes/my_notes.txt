@@ -31,5 +31,11 @@ return_tensors = in which data format we want the output. pt means pytorch tenso
 
 2) NVDIA SMI : C:\Windows\System32\DriverStore\FileRepository\nvamig.inf_amd64_a2789b14f82a67b9\nvidia-smi.exe
 
+3) 
+X_train, X_test, y_train, y_test = train_test_split(
+    requirements_X, label_y, test_size=0.2, random_state=42, stratify=label_y
+)
 
+Here, stratify means that it would preserve the distribution percentage of the data according to label_y.
+If label label_y has a class distribution for classes 0 and 1 of 40-60, this will be preserved in both train and test.
 
