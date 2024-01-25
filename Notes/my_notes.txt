@@ -1,0 +1,43 @@
+1) The irrelavant requirements dataset was taken from this -> https://ieeexplore.ieee.org/document/9650315
+
+2) Experiment 1 (Classifying the relevant and irrelavant requirements):
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+
+- I will need an NLP model for the classification
+- Can I run a classifier model instead of the language processor layer to classify requirements? 
+
+Observations
+-------------
+- There are too many relevant requirements to irrelavant ones (557 vs 64). So, I may need to use data resampling (check smote library)
+- Ensemble model is preferred as a classifier with proper hyperparameter tuning.
+
+- RoBERTA Tokenizer vs. BERT tokenizer, which is better?
+
+Some Self Learning
+------------------
+------------------
+
+1) 
+MY_DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+bert_tokenizer = DistilBertTokenizer.from_pretrained("roberta-base")
+bert_model = DistilBert.from_pretrained(
+    "distilbert-uncased", num_labels=2, device_map=MY_DEVICE
+)
+
+
+Here,
+return_tensors = in which data format we want the output. pt means pytorch tensors
+
+2) NVDIA SMI : C:\Windows\System32\DriverStore\FileRepository\nvamig.inf_amd64_a2789b14f82a67b9\nvidia-smi.exe
+
+3) 
+X_train, X_test, y_train, y_test = train_test_split(
+    requirements_X, label_y, test_size=0.2, random_state=42, stratify=label_y
+)
+
+Here, stratify means that it would preserve the distribution percentage of the data according to label_y.
+If label label_y has a class distribution for classes 0 and 1 of 40-60, this will be preserved in both train and test.
+
+4) My data for requirements relevancy is categorized either relevant or irrelevant. So there is no ordinal relationship.
+Therefore, one hot encoding would serve me best. 
