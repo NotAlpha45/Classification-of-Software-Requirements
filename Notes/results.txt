@@ -113,3 +113,12 @@ weighted avg       0.83      0.77      0.78       905
 
 
 
+Using DistilBERT Model:
+----------------------
+----------------------
+
+0) DistilBERT for Sequence Classification 
+-----------------------------------------
+Average Validation Accuracy: 0.7590
+Test Accuracy: 0.7627
+
