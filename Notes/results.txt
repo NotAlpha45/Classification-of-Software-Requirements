@@ -2,6 +2,11 @@ Using Roberta model :
 --------------------
 --------------------
 
+0) Roberta For Sequence Classification
+--------------------------------------
+Epoch 5/5 - Loss: 0.0551 - Validation Accuracy: 0.7580
+Test Accuracy: 0.7836
+
 1) Random Forest
 ----------------
 Fitting 5 folds for each of 81 candidates, totalling 405 fits
