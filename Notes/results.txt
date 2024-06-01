@@ -1,0 +1,86 @@
+Using Roberta model : 
+--------------------
+--------------------
+
+1) Random Forest
+----------------
+Fitting 5 folds for each of 81 candidates, totalling 405 fits
+Best Hyperparameters:  {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 300}
+Best Accuracy Score:  0.722783289047926
+
+Test set performance:
+              precision    recall  f1-score   support
+
+           0       0.53      0.86      0.65       476
+           1       0.91      0.65      0.76      1058
+
+    accuracy                           0.72      1534
+   macro avg       0.72      0.76      0.71      1534
+weighted avg       0.79      0.72      0.73      1534
+
+Validation set performance:
+              precision    recall  f1-score   support
+
+           0       0.90      0.73      0.81       650
+           1       0.54      0.80      0.64       255
+
+    accuracy                           0.75       905
+   macro avg       0.72      0.77      0.73       905
+weighted avg       0.80      0.75      0.76       905
+
+
+2) LightGBM
+------------
+Best Hyperparameters:  {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'min_child_samples': 20, 'n_estimators': 300, 'num_leaves': 50, 'subsample': 0.8}
+Best Accuracy Score:  0.7327662316224434
+
+Test Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.50      0.85      0.63       476
+           1       0.90      0.62      0.74      1058
+
+    accuracy                           0.69      1534
+   macro avg       0.70      0.74      0.68      1534
+weighted avg       0.78      0.69      0.70      1534
+
+Validation Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.72      0.82       650
+           1       0.56      0.89      0.68       255
+
+    accuracy                           0.77       905
+   macro avg       0.75      0.81      0.75       905
+weighted avg       0.83      0.77      0.78       905
+
+
+3) SVM
+------
+Best Hyperparameters:  {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+Best Accuracy Score:  0.7369161026711467
+
+Test Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.55      0.87      0.68       476
+           1       0.92      0.68      0.78      1058
+
+    accuracy                           0.74      1534
+   macro avg       0.74      0.78      0.73      1534
+weighted avg       0.81      0.74      0.75      1534
+
+Validation Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.96      0.71      0.81       650
+           1       0.55      0.92      0.69       255
+
+    accuracy                           0.77       905
+   macro avg       0.75      0.81      0.75       905
+weighted avg       0.84      0.77      0.78       905
+
+
+4) XGB Classifier
+-----------------
+
