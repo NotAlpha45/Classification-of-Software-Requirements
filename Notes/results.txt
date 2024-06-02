@@ -122,3 +122,107 @@ Using DistilBERT Model:
 Average Validation Accuracy: 0.7590
 Test Accuracy: 0.7627
 
+1) Random Forest 
+----------------
+Best Hyperparameters:  {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100}
+Best Accuracy Score:  0.7491669195993546
+
+Test Set Performance:
+
+              precision    recall  f1-score   support
+
+           0       0.44      0.91      0.59       476
+           1       0.92      0.48      0.63      1058
+
+    accuracy                           0.61      1534
+   macro avg       0.68      0.69      0.61      1534
+weighted avg       0.77      0.61      0.62      1534
+
+Validation Set Performance:
+
+              precision    recall  f1-score   support
+
+           0       0.92      0.76      0.84       650
+           1       0.58      0.84      0.69       255
+
+    accuracy                           0.78       905
+   macro avg       0.75      0.80      0.76       905
+weighted avg       0.83      0.78      0.79       905
+
+
+2) XGB Classifier
+-----------------
+Best Hyperparameters:  {'colsample_bytree': 0.8, 'gamma': 0.1, 'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+Best Accuracy Score:  0.7525503602293966
+
+Test Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.46      0.87      0.61       476
+           1       0.90      0.55      0.68      1058
+
+    accuracy                           0.65      1534
+   macro avg       0.68      0.71      0.64      1534
+weighted avg       0.77      0.65      0.66      1534
+
+Validation Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.93      0.74      0.82       650
+           1       0.56      0.87      0.68       255
+
+    accuracy                           0.77       905
+   macro avg       0.75      0.80      0.75       905
+weighted avg       0.83      0.77      0.78       905
+
+
+3) LightGBM Classifier
+----------------------
+Best Hyperparameters:  {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'min_child_samples': 50, 'n_estimators': 200, 'num_leaves': 50, 'subsample': 0.8}
+Best Accuracy Score:  0.7540589040293508
+
+Train Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.46      0.87      0.61       476
+           1       0.90      0.55      0.68      1058
+
+    accuracy                           0.65      1534
+   macro avg       0.68      0.71      0.64      1534
+weighted avg       0.77      0.65      0.66      1534
+
+Test Set Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.73      0.82       650
+           1       0.56      0.88      0.68       255
+
+    accuracy                           0.77       905
+   macro avg       0.75      0.80      0.75       905
+weighted avg       0.83      0.77      0.78       905
+
+
+4) SVM Classifier
+-----------------
+Best Hyperparameters:  {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'}
+Best Accuracy Score:  0.7591452472616709
+
+Test Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.49      0.87      0.63       476
+           1       0.91      0.59      0.71      1058
+
+    accuracy                           0.67      1534
+   macro avg       0.70      0.73      0.67      1534
+weighted avg       0.78      0.67      0.69      1534
+
+Validation Set Performance:
+              precision    recall  f1-score   support
+
+           0       0.95      0.70      0.81       650
+           1       0.54      0.90      0.68       255
+
+    accuracy                           0.76       905
+   macro avg       0.74      0.80      0.74       905
+weighted avg       0.83      0.76      0.77       905
